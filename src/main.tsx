@@ -5,6 +5,14 @@ import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "./hooks/useTheme";
 
-const basename = import.meta.env.BASE_URL;
+const isTempo = import.meta.env?.TEMPO === "true";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(<></>);
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
+    </BrowserRouter>
+  </React.StrictMode>
+);

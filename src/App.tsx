@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/home";
+import AppComponent from "./components/AppComponent";
 
 function App() {
   return (
@@ -10,6 +11,10 @@ function App() {
           <Route
             path="/"
             element={<Home className="w-[592px] h-[1098px]" />}
+          />
+          <Route
+            path="/app"
+            element={<AppComponent className="w-full h-full" />}
           />
         </Routes>
       </Suspense>
