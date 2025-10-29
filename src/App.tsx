@@ -1,12 +1,18 @@
 import { Suspense } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useRoutes } from "react-router-dom";
 import Home from "./components/home";
 import AppComponent from "./components/AppComponent";
+import LandingPage from "@/components/LandingPage";
+import routes from "tempo-routes";
 
 function App() {
+  const tempoRoutes = useRoutes(routes);
+
   return (
-    <div className="flex w-[583px] h-[1303px]">
+    <div className="min-h-screen bg-background">
+      <LandingPage />
       <Suspense fallback={<p>Loading...</p>}>
+        {tempoRoutes}
         <Routes>
           <Route
             path="/"

@@ -15,7 +15,8 @@ import {
   Cpu,
   Database,
   Activity,
-  ArrowLeft
+  ArrowLeft,
+  Check,
 } from "lucide-react";
 
 interface ChromeExtensionGuideProps {
@@ -35,64 +36,92 @@ export const ChromeExtensionGuide = ({ onBack }: ChromeExtensionGuideProps) => {
     }
   };
 
-  const architectureSteps = [
+  const installationSteps = [
     {
       id: 1,
-      title: "Neural Network Initialization",
-      subtitle: "Extension Package Deployment",
-      description: "Download and initialize the multi-layer perceptron extension architecture with ensemble learning capabilities.",
-      technical: "Distributed consensus protocol enables seamless blockchain integration",
-      icon: Brain,
-      commands: ["chrome://extensions/", "Enable Developer Mode", "Load Unpacked Extension"],
-      metrics: { accuracy: "99.7%", latency: "12ms", throughput: "15K tx/s" }
+      title: "Download Extension",
+      subtitle: "Get Started with the Chrome Extension",
+      description:
+        "Download and install our extension from the Chrome Web Store or load it in developer mode.",
+      tip: "The extension enables secure stablecoin payments across platforms",
+      icon: Download,
+      commands: [
+        "Open Chrome Web Store",
+        "Search for 'Stablecoin Payments'",
+        "Click 'Add to Chrome'",
+      ],
+      metrics: { time: "2 min", difficulty: "Easy", support: "Available" },
     },
     {
       id: 2,
-      title: "Gradient Descent Configuration",
-      subtitle: "Wallet Integration Protocol",
-      description: "Configure the adaptive learning algorithm to optimize transaction routing through weighted decision trees.",
-      technical: "Stochastic gradient descent with momentum-based wallet discovery",
+      title: "Connect Your Wallet",
+      subtitle: "Link Your Crypto Wallet",
+      description:
+        "Connect your preferred wallet (MetaMask, WalletConnect, or hardware wallet) to enable payments.",
+      tip: "Your private keys always remain secure and are never shared",
       icon: Network,
-      commands: ["MetaMask Connect", "WalletConnect Bridge", "Hardware Wallet Support"],
-      metrics: { precision: "98.9%", recall: "97.2%", f1_score: "98.0%" }
+      commands: [
+        "Click extension icon",
+        "Select 'Connect Wallet'",
+        "Choose your wallet provider",
+      ],
+      metrics: { wallets: "10+ supported", security: "End-to-end", fees: "Transparent" },
     },
     {
       id: 3,
-      title: "Feature Engineering Pipeline",
-      subtitle: "Permission Matrix Setup",
-      description: "Establish feature extraction layers for cross-platform donation routing with ensemble voting mechanisms.",
-      technical: "Random forest classifier with attention mechanism for platform detection",
-      icon: Cpu,
-      commands: ["Grant Site Permissions", "Enable Background Scripts", "Configure API Keys"],
-      metrics: { auc_roc: "0.987", precision_at_k: "94.3%", ndcg: "0.923" }
+      title: "Set Permissions",
+      subtitle: "Configure Access Settings",
+      description:
+        "Grant the necessary permissions for the extension to interact with content creator platforms.",
+      tip: "Only minimal permissions are requested for security",
+      icon: Shield,
+      commands: [
+        "Review permissions",
+        "Enable site access",
+        "Configure notification settings",
+      ],
+      metrics: { privacy: "Enhanced", data: "Not collected", control: "Full user control" },
     },
     {
       id: 4,
-      title: "Reinforcement Learning Calibration",
-      subtitle: "Platform Integration Testing",
-      description: "Train the Q-learning model with historical transaction data to optimize conversion pathways across platforms.",
-      technical: "Deep Q-Network with experience replay and target network stabilization",
+      title: "Platform Integration",
+      subtitle: "Connect Creator Platforms",
+      description:
+        "Link your favorite content platforms (YouTube, Twitch, Discord) to enable seamless donations.",
+      tip: "Integration allows one-click donations while watching content",
       icon: Database,
-      commands: ["Test Twitch Integration", "Verify YouTube API", "Validate Discord Hooks"],
-      metrics: { reward_mean: "+127.3", epsilon: "0.05", learning_rate: "0.001" }
+      commands: [
+        "Go to Settings > Platforms",
+        "Select platforms to enable",
+        "Authorize connections",
+      ],
+      metrics: {
+        platforms: "YouTube, Twitch, Discord",
+        setup: "One-time",
+        creators: "Unlimited",
+      },
     },
     {
       id: 5,
-      title: "Production Deployment",
-      subtitle: "Ensemble Model Activation",
-      description: "Deploy the fully trained ensemble with real-time inference capabilities and continuous learning adaptation.",
-      technical: "Multi-agent reinforcement learning with federated consensus mechanisms",
+      title: "Ready to Use",
+      subtitle: "Start Supporting Creators",
+      description:
+        "Your extension is now fully configured and ready to use for supporting content creators with stablecoin donations.",
+      tip: "Set up auto-donations or use the quick-donate feature while watching content",
       icon: Activity,
-      commands: ["Enable Live Monitoring", "Activate Auto-Donations", "Configure Thresholds"],
-      metrics: { uptime: "99.99%", error_rate: "0.001%", roi: "+340%" }
-    }
+      commands: [
+        "Visit creator content",
+        "Click extension icon",
+        "Select amount and send",
+      ],
+      metrics: { transaction: "Instant", conversion: "Automatic", fees: "Minimal" },
+    },
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 dark:from-slate-900 dark:via-purple-900 dark:to-slate-900 light:from-purple-50 light:via-purple-100 light:to-slate-50 text-white dark:text-white light:text-slate-900 overflow-hidden">
       {/* Animated background grid */}
       <div className="absolute inset-0 grid-bg opacity-20" />
-
       {/* Neural network visualization */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(20)].map((_, i) => (
@@ -108,7 +137,6 @@ export const ChromeExtensionGuide = ({ onBack }: ChromeExtensionGuideProps) => {
           />
         ))}
       </div>
-
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="flex items-center mb-8">
@@ -122,10 +150,10 @@ export const ChromeExtensionGuide = ({ onBack }: ChromeExtensionGuideProps) => {
           </Button>
           <div>
             <h1 className="text-4xl font-bold gradient-text mb-2">
-              Neural Extension Deployment Protocol
+              Chrome Extension Setup Guide
             </h1>
             <p className="text-lg text-gray-300 dark:text-gray-300 light:text-gray-600">
-              Advanced ML-Powered Chrome Extension Installation Framework
+              Easy 5-step process to start supporting creators with stablecoins
             </p>
           </div>
         </div>
@@ -135,7 +163,7 @@ export const ChromeExtensionGuide = ({ onBack }: ChromeExtensionGuideProps) => {
           <CardHeader>
             <CardTitle className="flex items-center text-purple-300">
               <Terminal className="w-5 h-5 mr-2" />
-              Ensemble Training Progress
+              Installation Progress
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -144,49 +172,71 @@ export const ChromeExtensionGuide = ({ onBack }: ChromeExtensionGuideProps) => {
               className="mb-4 h-3"
             />
             <div className="flex justify-between text-sm text-gray-400">
-              <span>Neural Layers Initialized: {completedSteps.length}/5</span>
-              <span>Model Accuracy: {Math.min(95 + completedSteps.length * 1.2, 99.7).toFixed(1)}%</span>
+              <span>Steps Completed: {completedSteps.length}/5</span>
+              <span>
+                {completedSteps.length === 5 
+                  ? "Setup Complete!" 
+                  : `${Math.round((completedSteps.length / 5) * 100)}% Complete`}
+              </span>
             </div>
           </CardContent>
         </Card>
 
         {/* Installation Steps */}
         <div className="space-y-6">
-          {architectureSteps.map((step) => (
+          {installationSteps.map((step) => (
             <Card
               key={step.id}
               className={`glass-dark-strong border transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 ${
-                currentStep === step.id ? 'border-purple-400 shadow-purple-500/50' :
-                completedSteps.includes(step.id) ? 'border-green-500/50' : 'border-purple-500/30'
+                currentStep === step.id
+                  ? "border-purple-400 shadow-purple-500/50"
+                  : completedSteps.includes(step.id)
+                    ? "border-green-500/50"
+                    : "border-purple-500/30"
               }`}
             >
               <CardHeader>
                 <div className="flex items-start justify-between">
                   <div className="flex items-start space-x-4">
-                    <div className={`p-3 rounded-lg ${
-                      completedSteps.includes(step.id) ? 'bg-green-500/20' : 'bg-purple-500/20'
-                    }`}>
-                      <step.icon className={`w-6 h-6 ${
-                        completedSteps.includes(step.id) ? 'text-green-400' : 'text-purple-400'
-                      }`} />
+                    <div
+                      className={`p-3 rounded-lg ${
+                        completedSteps.includes(step.id)
+                          ? "bg-green-500/20"
+                          : "bg-purple-500/20"
+                      }`}
+                    >
+                      <step.icon
+                        className={`w-6 h-6 ${
+                          completedSteps.includes(step.id)
+                            ? "text-green-400"
+                            : "text-purple-400"
+                        }`}
+                      />
                     </div>
                     <div>
                       <div className="flex items-center space-x-3 mb-2">
-                        <Badge variant="outline" className="text-purple-300 border-purple-500/50">
-                          Layer {step.id}
+                        <Badge
+                          variant="outline"
+                          className="text-purple-300 border-purple-500/50"
+                        >
+                          Step {step.id}
                         </Badge>
                         <CardTitle className="text-xl">{step.title}</CardTitle>
                       </div>
-                      <p className="text-purple-300 font-medium mb-2">{step.subtitle}</p>
+                      <p className="text-purple-300 font-medium mb-2">
+                        {step.subtitle}
+                      </p>
                       <p className="text-gray-300 dark:text-gray-300 light:text-gray-600 mb-3">
                         {step.description}
                       </p>
                       <div className="bg-slate-800/50 dark:bg-slate-800/50 light:bg-white/80 rounded-lg p-3 border border-purple-500/20">
                         <div className="flex items-center text-sm text-purple-300 mb-1">
-                          <Cpu className="w-4 h-4 mr-2" />
-                          Technical Implementation
+                          <Zap className="w-4 h-4 mr-2" />
+                          Helpful Tip
                         </div>
-                        <p className="text-sm text-gray-400 font-mono">{step.technical}</p>
+                        <p className="text-sm text-gray-400">
+                          {step.tip}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -196,14 +246,14 @@ export const ChromeExtensionGuide = ({ onBack }: ChromeExtensionGuideProps) => {
                     </div>
                     {completedSteps.includes(step.id) && (
                       <Badge className="bg-green-500/20 text-green-400 border-green-500/50">
-                        ✓ Complete
+                        <Check className="w-3 h-3 mr-1" /> Complete
                       </Badge>
                     )}
                   </div>
                 </div>
               </CardHeader>
               <CardContent>
-                {/* Command Terminal */}
+                {/* How-to Instructions */}
                 <div className="bg-slate-900/80 rounded-lg p-4 mb-4 border border-purple-500/20">
                   <div className="flex items-center mb-3">
                     <div className="flex space-x-2 mr-4">
@@ -211,24 +261,32 @@ export const ChromeExtensionGuide = ({ onBack }: ChromeExtensionGuideProps) => {
                       <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                       <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                     </div>
-                    <span className="text-sm text-gray-400 font-mono">neural-extension-cli v2.1.0</span>
+                    <span className="text-sm text-gray-400">
+                      How to complete this step
+                    </span>
                   </div>
                   <div className="space-y-2">
                     {step.commands.map((command, idx) => (
-                      <div key={idx} className="flex items-center text-sm font-mono">
-                        <span className="text-purple-400 mr-2">$</span>
+                      <div
+                        key={idx}
+                        className="flex items-center text-sm"
+                      >
+                        <span className="text-purple-400 mr-2">{idx + 1}.</span>
                         <span className="text-green-400">{command}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                {/* Performance Metrics */}
+                {/* Key Information */}
                 <div className="grid grid-cols-3 gap-4 mb-4">
                   {Object.entries(step.metrics).map(([key, value]) => (
-                    <div key={key} className="bg-purple-500/10 rounded-lg p-3 border border-purple-500/20">
+                    <div
+                      key={key}
+                      className="bg-purple-500/10 rounded-lg p-3 border border-purple-500/20"
+                    >
                       <div className="text-sm text-purple-300 uppercase tracking-wider">
-                        {key.replace('_', ' ')}
+                        {key.replace("_", " ")}
                       </div>
                       <div className="text-lg font-bold text-white">
                         {value}
@@ -237,15 +295,16 @@ export const ChromeExtensionGuide = ({ onBack }: ChromeExtensionGuideProps) => {
                   ))}
                 </div>
 
-                {currentStep === step.id && !completedSteps.includes(step.id) && (
-                  <Button
-                    onClick={() => markStepComplete(step.id)}
-                    className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0"
-                  >
-                    Complete Neural Layer {step.id}
-                    <ChevronRight className="w-4 h-4 ml-2" />
-                  </Button>
-                )}
+                {currentStep === step.id &&
+                  !completedSteps.includes(step.id) && (
+                    <Button
+                      onClick={() => markStepComplete(step.id)}
+                      className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0"
+                    >
+                      Mark Step {step.id} Complete
+                      <ChevronRight className="w-4 h-4 ml-2" />
+                    </Button>
+                  )}
               </CardContent>
             </Card>
           ))}
@@ -260,20 +319,20 @@ export const ChromeExtensionGuide = ({ onBack }: ChromeExtensionGuideProps) => {
                   <Shield className="w-8 h-8 text-green-400" />
                 </div>
                 <h3 className="text-2xl font-bold text-green-400 mb-2">
-                  Ensemble Model Successfully Deployed
+                  Setup Complete!
                 </h3>
                 <p className="text-gray-300 dark:text-gray-300 light:text-gray-600 mb-4">
-                  Your neural extension is now active with full ensemble learning capabilities.
-                  The multi-agent system is ready for real-time donation optimization.
+                  Your extension is now ready to use. You can now support your favorite content creators 
+                  with stablecoin donations across multiple platforms.
                 </p>
                 <div className="flex justify-center space-x-4">
                   <Badge className="bg-green-500/20 text-green-400 border-green-500/50">
                     <Zap className="w-4 h-4 mr-1" />
-                    Live Inference Active
+                    Ready to Use
                   </Badge>
                   <Badge className="bg-purple-500/20 text-purple-400 border-purple-500/50">
                     <Brain className="w-4 h-4 mr-1" />
-                    ML Models Loaded
+                    Smart Payments Enabled
                   </Badge>
                 </div>
               </div>
